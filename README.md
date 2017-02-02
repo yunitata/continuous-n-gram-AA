@@ -38,3 +38,5 @@ To run the experiment, simply run this following command:
 ```THEANO_FLAGS=mode=FAST_RUN,device=gpu,floatX=float32 python fastText.py -datasetname -mode -trainfilepath -testfilepath```
   
 **datasetname refers to the code-name of the data, it can be ccat10, ccat50, judgment or imdb
+**mode refers to the 
+The codes meant to be run in gpu machine. It can be run in cpu by changing the device=cpu, although the runtime will be significantly longer.
