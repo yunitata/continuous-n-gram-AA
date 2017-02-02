@@ -7,8 +7,20 @@ from keras.optimizers import Adam
 np.random.seed(1337)
 
 
-def model_woc(train, valid, test, y_tr, y_val, y_test, max_features, nb_class, emb_size, seq_length, nb_epoch, batch_size, lr):
-    print (max_features)
+def model_woc(train, 
+              valid, 
+              test, 
+              y_tr, 
+              y_val, 
+              y_test, 
+              max_features, 
+              nb_class, 
+              emb_size, 
+              seq_length, 
+              nb_epoch, 
+              batch_size, 
+              lr):
+
     model = Sequential()
     model.add(Embedding(max_features, output_dim=emb_size, input_length=seq_length, dropout=0.75, init='glorot_uniform'))
     model.add(AveragePooling1D(pool_length=model.output_shape[1]))
@@ -28,8 +40,24 @@ def model_woc(train, valid, test, y_tr, y_val, y_test, max_features, nb_class, e
     return acc
 
 
-def model_wac(train_char, valid_char, test_char, train_wd, valid_wd, test_wd, y_tr, y_val, y_ts, max_features_char, max_features_wd
-              , nb_class, emb_size, seq_length_word, seq_length_char, nb_epoch, batch_size, lr):
+def model_wac(train_char, 
+              valid_char, 
+              test_char, 
+              train_wd, 
+              valid_wd, 
+              test_wd, 
+              y_tr, 
+              y_val, 
+              y_ts, 
+              max_features_char, 
+              max_features_wd,
+              nb_class, 
+              emb_size,
+              seq_length_word, 
+              seq_length_char, 
+              nb_epoch, 
+              batch_size, 
+              lr):
     modelw = Sequential()
     modelw.add(Embedding(max_features_wd, emb_size, input_length=seq_length_word, dropout=0.75, init='glorot_uniform'))
     modelw.add(AveragePooling1D(pool_length=modelw.output_shape[1]))
