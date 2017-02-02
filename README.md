@@ -20,9 +20,20 @@ Preparing Data
   ```python data_prep.py folder_path csv_path "data_code"```
 
   CCAT10 and CCAT50 each comes with train and test folders, thus it will have separate train and test csv file.
-  For example to prepare train and test data for CCAT data
+  For example to prepare train and test data for CCAT10 data
 
   ```python data_prep.py "/home/C10train" "/home/C10_train.csv" "ccat"```
 
   ```python data_prep.py "/home/C10test" "/home/C10_test.csv" "ccat"```
-
+  
+  For imdb dataset, it does not comes with separate train/test set, to create the csv file:
+  ``` ```
+  Lastly, for Judgment dataset, it already comes in one .txt file.
+  ---------------------------------------------------------------------
+  Running Experiment
+  ------------------
+  To run the experiment, simply run this following command:
+  
+  ```THEANO_FLAGS=mode=FAST_RUN,device=gpu,floatX=float32 python fastText.py -datasetname -mode -trainfilepath -testfilepath```
+  
+  **datasetname refers to the code-name of the data, it can be ccat10, ccat50, judgment or imdb
