@@ -9,4 +9,4 @@ Dependencies
 
 Cloning the repository
 ----------------------
-<git clone https://github.com/yunitata/continuous-n-gram-AA>
+<pre>git clone https://github.com/yunitata/continuous-n-gram-AA><code>
