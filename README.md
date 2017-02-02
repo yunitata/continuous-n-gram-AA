@@ -39,7 +39,7 @@ Running Experiment
 ------------------
 To run the experiment, simply run this following command:
   
-```THEANO_FLAGS=mode=FAST_RUN,device=gpu,floatX=float32 python fastText.py datasetname mode trainfilepath testfilepath```
+```THEANO_FLAGS=mode=FAST_RUN,device=gpu,floatX=float32 python training_testing.py datasetname mode trainfilepath testfilepath```
  
   **datasetname** refers to the code-name of the data, it can be ccat10, ccat50, judgment or imdb <br />
   **mode** refers to the model applied, which are *word*, *char*, or *wordchar* <br />
@@ -51,7 +51,7 @@ For example if you want to run the experiment for CCAT10 data with *char* model,
 
 For IMDb62 and Judgment dataset, you just need to point to the .txt or .csv file as follows:
 
-```THEANO_FLAGS=device=gpu,floatX=float32 python fastText.py "imdb" "char" "/home/imdb.csv"```
+```THEANO_FLAGS=device=gpu,floatX=float32 python training_testing.py "imdb" "char" "/home/imdb.csv"```
 
 References
 ----------
