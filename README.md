@@ -31,11 +31,10 @@ Preparing Data
   Lastly, for Judgment dataset, it already comes in one .txt file.
   
   
-  ---------------------------------------------------------------------
 Running Experiment
 ------------------
 To run the experiment, simply run this following command:
   
-  ```THEANO_FLAGS=mode=FAST_RUN,device=gpu,floatX=float32 python fastText.py -datasetname -mode -trainfilepath -testfilepath```
+```THEANO_FLAGS=mode=FAST_RUN,device=gpu,floatX=float32 python fastText.py -datasetname -mode -trainfilepath -testfilepath```
   
-  **datasetname refers to the code-name of the data, it can be ccat10, ccat50, judgment or imdb
+**datasetname refers to the code-name of the data, it can be ccat10, ccat50, judgment or imdb
