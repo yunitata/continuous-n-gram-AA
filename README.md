@@ -6,6 +6,8 @@ Dependencies
 1. Python 2.7
 2. Scikit Learn
 3. Keras (with Theano backend)
+4. Pandas
+5. NLTK
 
 Cloning the repository
 ----------------------
