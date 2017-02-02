@@ -14,7 +14,7 @@ Cloning the repository
 
 Preparing Data
 --------------
-1. All the dataset need to be requested directly from the author. Please refer the CCAT10 and CCAT50 to this paper (link paper) while Judgment and IMDb62 to this paper (). Please note that there are two version of IMDb62 datasets. In this experiment, we used the version which contains 62,000 movie reviews and 17,550 message board posts.
+1. All the dataset need to be requested directly from the author. Please refer the CCAT10 and CCAT50 to this paper[] (link paper) while Judgment and IMDb62 to this paper [http://www.mitpressjournals.org/doi/pdf/10.1162/COLI_a_00173][2]. Please note that there are two version of IMDb62 datasets. In this experiment, we used the version which contains 62,000 movie reviews and 17,550 message board posts.
 2. CCAT10, CCAT50 and IMDb62 datasets comes in the form of list of files per author. To make things easier, we merge all the documents from each of the author (for each of the dataset) into one csv file. It can be done with this following command:
 
   ```python data_prep.py folder_path csv_path "data_code"```
@@ -40,3 +40,8 @@ To run the experiment, simply run this following command:
 **datasetname refers to the code-name of the data, it can be ccat10, ccat50, judgment or imdb <br />
 **mode refers to the <br />
 The codes meant to be run in gpu machine. It can be run in cpu by changing the device=cpu, although the runtime will be significantly longer.<br />
+
+
+References
+----------
+[2]http://www.mitpressjournals.org/doi/pdf/10.1162/COLI_a_00173
