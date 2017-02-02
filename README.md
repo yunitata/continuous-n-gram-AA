@@ -12,8 +12,6 @@ Cloning the repository
 ```git clone https://github.com/yunitata/continuous-n-gram-AA```
 
 
-----------------------------------------------------------------------
-
 Preparing Data
 --------------
 1. All the dataset need to be requested directly from the author. Please refer the CCAT10 and CCAT50 to this paper (link paper) while Judgment and IMDb62 to this paper (). Please note that there are two version of IMDb62 datasets. In this experiment, we used the version which contains 62,000 movie reviews and 17,550 message board posts.
