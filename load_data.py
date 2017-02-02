@@ -14,10 +14,9 @@ def load_ccat_data(data_path):
     x = np.array(data['article'])
     y = np.array(data['class'])
     x_mapped = text_preprocess.mapped_text(x)  # mapping with listed character
-    print x_mapped
+    
     # transform y (label of author name) into integer label (start from 1)
     auth_class = list(set(y))
-    print auth_class
     le = preprocessing.LabelEncoder()
     le.fit(auth_class)
     y_numeric = le.transform(y)
@@ -32,11 +31,12 @@ def load_data_imdb62(data_path_imdb):
             per_line = line.split("\t")
             author.append(per_line[0])
             content.append(per_line[1])
-        # x = np.array(content)
+        x = np.array(content)
         y = np.array(author)
     f.close()
     x_mapped = text_preprocess.mapped_text(content)
-    # encode labels with value between 0 and n_author-1
+    
+    # encode numerical labels y with value between 0 and n_author-1
     auth_class = list(set(y))
     le = preprocessing.LabelEncoder()
     le.fit(auth_class)
@@ -61,7 +61,6 @@ def load_data_judgment(data_judgment):
 
     # transform y (label of author name) into integer label (start from 1)
     auth_class = list(set(y))
-    print auth_class
     le = preprocessing.LabelEncoder()
     le.fit(auth_class)
     y_numeric = le.transform(y)
