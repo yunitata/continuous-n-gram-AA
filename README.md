@@ -30,7 +30,7 @@ Preparing Data
   
   For imdb dataset, it does not come with separate train/test set, to create the csv file: 
   
-  ```test ``` <\br>
+  ```test ``` <br />
   
   Lastly, for Judgment dataset, it already comes in one .txt file.
   
@@ -41,8 +41,8 @@ To run the experiment, simply run this following command:
   
 ```THEANO_FLAGS=mode=FAST_RUN,device=gpu,floatX=float32 python fastText.py datasetname mode trainfilepath testfilepath```
  
-**datasetname** refers to the code-name of the data, it can be ccat10, ccat50, judgment or imdb <br />
-**mode** refers to the model applied, which are *word*, *char*, or *wordchar* <br />
+  **datasetname** refers to the code-name of the data, it can be ccat10, ccat50, judgment or imdb <br />
+  **mode** refers to the model applied, which are *word*, *char*, or *wordchar* <br />
 The codes meant to be run in gpu machine. It can be run in cpu by changing the device=cpu, although the runtime will be significantly longer.<br />
 For example if you want to run the experiment for CCAT10 data with *char* model, then the command will be:
 
