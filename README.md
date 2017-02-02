@@ -10,6 +10,8 @@ Dependencies
 Cloning the repository
 ----------------------
 ```git clone https://github.com/yunitata/continuous-n-gram-AA```
+
+
 ----------------------------------------------------------------------
 
 Preparing Data
@@ -29,10 +31,12 @@ Preparing Data
   For imdb dataset, it does not comes with separate train/test set, to create the csv file:
   ```test ```
   Lastly, for Judgment dataset, it already comes in one .txt file.
+  
+  
   ---------------------------------------------------------------------
-  Running Experiment
-  ------------------
-  To run the experiment, simply run this following command:
+Running Experiment
+------------------
+To run the experiment, simply run this following command:
   
   ```THEANO_FLAGS=mode=FAST_RUN,device=gpu,floatX=float32 python fastText.py -datasetname -mode -trainfilepath -testfilepath```
   
