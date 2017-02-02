@@ -27,7 +27,7 @@ Preparing Data
   ```python data_prep.py "/home/C10test" "/home/C10_test.csv" "ccat"```
   
   For imdb dataset, it does not comes with separate train/test set, to create the csv file:
-  ``` ```
+  ```test ```
   Lastly, for Judgment dataset, it already comes in one .txt file.
   ---------------------------------------------------------------------
   Running Experiment
