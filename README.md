@@ -10,6 +10,7 @@ Dependencies
 Cloning the repository
 ----------------------
 <pre>git clone https://github.com/yunitata/continuous-n-gram-AA><code>
+----------------------------------------------------------------------
 
 Preparing Data
 --------------
