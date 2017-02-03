@@ -55,6 +55,13 @@ For IMDb62 and Judgment dataset, you just need to point to the .txt or .csv file
 
 Please refer to the paper for the detail of the experiments.
 
+Example outputs
+---------------
+```Epoch 1/150 <br />
+450/450 [==============================] - 2s - loss: 2.2917 - acc: 0.2689 - val_loss: 2.2667 - val_acc: 0.5000 <br />
+Epoch 2/150 <br />
+450/450 [==============================] - 2s - loss: 2.2621 - acc: 0.4644 - val_loss: 2.2241 - val_acc: 0.5200```
+
 References
 ----------
 [1] http://www.sciencedirect.com/science/article/pii/S0306457307001197 <br />
