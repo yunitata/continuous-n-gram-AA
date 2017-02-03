@@ -64,6 +64,6 @@ Example outputs
 
 References
 ----------
-[1] https://keras.io/
+[1] https://keras.io/ <br />
 [2] http://www.sciencedirect.com/science/article/pii/S0306457307001197 <br />
 [3] http://www.mitpressjournals.org/doi/pdf/10.1162/COLI_a_00173 <br />
