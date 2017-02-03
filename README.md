@@ -53,6 +53,8 @@ For IMDb62 and Judgment dataset, you just need to point to the .txt or .csv file
 
 ```THEANO_FLAGS=device=gpu,floatX=float32 python training_testing.py "imdb" "char" "/home/imdb.csv"```
 
+Please refer to the paper for the detail of the experiments.
+
 References
 ----------
 [1] http://www.sciencedirect.com/science/article/pii/S0306457307001197 <br />
