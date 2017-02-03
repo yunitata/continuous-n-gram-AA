@@ -5,7 +5,7 @@ Dependencies
 ------------
 1. Python 2.7
 2. Scikit Learn 0.18
-3. Keras (with Theano backend) 1.1.1 (Please refers to the [Keras website] (https://keras.io/) [1] for the installation step)
+3. Keras 1.1.1 (with Theano backend)  (Please refers to the [Keras website] (https://keras.io/) [1] for the installation step)
 4. Pandas
 5. NLTK 3.0.4
 
