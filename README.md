@@ -32,7 +32,7 @@ Preparing Data
   
   ```test ``` <br />
   
-  Lastly, for Judgment dataset, it already comes in one .txt file.
+  Lastly, for Judgment dataset, it already comes in one .txt file, so no data preparation is needed.
   
   
 Running Experiment
