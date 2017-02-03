@@ -30,13 +30,13 @@ def model_woc(train,
     model.compile(loss='categorical_crossentropy', optimizer=adam, metrics=['accuracy'])
 
     earlystop_cb = keras.callbacks.EarlyStopping(monitor='val_loss', patience=5, verbose=2, mode='auto')
-    print "Training the model..."
+    print ("Training the model...")
     model.fit(train, y_tr,
                   nb_epoch=nb_epoch,
                   batch_size=batch_size,
                   validation_data=[valid, y_val],
                   callbacks=[earlystop_cb])
-    print "Evaluate on test data.."
+    print ("Evaluate on test data..")
     loss, acc = model.evaluate(test, y_test, verbose=2)
     #pred = model.predict_classes(test)
     return acc
@@ -76,13 +76,13 @@ def model_wac(train_char,
     adam = Adam(lr=lr)
     model.compile(loss='categorical_crossentropy', optimizer=adam, metrics=['accuracy'])
     earlystop_cb = keras.callbacks.EarlyStopping(monitor='val_loss', patience=5, verbose=2, mode='auto')
-    print "Training the model..."
+    print ("Training the model...")
     model.fit([train_wd, train_char], y_tr,
                       nb_epoch=nb_epoch,
                       batch_size=batch_size,
                       validation_data=([valid_wd,valid_char], y_val),
                       callbacks=[earlystop_cb])
-    print "Evaluate on test data..."
+    print ("Evaluate on test data...")
     loss, acc = model.evaluate([test_wd, test_char], y_ts)
     # pred = model.predict_classes([test_wd, test_char])
     return acc
