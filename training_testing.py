@@ -88,13 +88,13 @@ if __name__ == "__main__":
             acc = train_test(x_tr, x_val, x_ts, y_tr, y_val, y_ts, mode, batch_size, nb_class, nb_epoch,
                              seq_length_word, seq_length_char, lr)
             print "Test Accuracy:", acc
-            #logging.debug(acc)
+            logging.debug(acc)
         elif data_set == 'ccat50':
             nb_class = 50
             acc = train_test(x_tr, x_val, x_ts, y_tr, y_val, y_ts, mode, batch_size, nb_class, nb_epoch,
                              seq_length_word, seq_length_char, lr)
             print "Test Accuracy:", acc
-            #logging.debug(acc)
+            logging.debug(acc)
     elif len(sys.argv) == 4 and data_set == 'judgment':
         nb_class = 3
         batch_size = 5
@@ -142,6 +142,6 @@ if __name__ == "__main__":
             print "cv: " + str(i) + ", acc: " + str(acc)
             i += 1
             results.append(acc)
-            #logging.debug(acc)
+            logging.debug(acc)
         print "Test Accuracy:", str(np.mean(results))
         #logging.debug(results)
