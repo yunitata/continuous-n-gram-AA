@@ -59,19 +59,16 @@ def train_test(x_tr, x_val, x_ts, y_tr, y_val, y_ts,
 if __name__ == "__main__":
     data_set = sys.argv[1]
     mode = sys.argv[2]
-
+# create logging file
     if mode == "word":
-        logfile = "FastTextWord.out"
+        logfile = "WordModel.out"
         logging.basicConfig(filename=logfile, filemode='a', level=logging.DEBUG)
-        logging.debug('imdb_Word')
     elif mode == "char":
-        logfile = "FastTextchar.out"
+        logfile = "charModel.out"
         logging.basicConfig(filename=logfile, filemode='a', level=logging.DEBUG)
-        logging.debug('imdb_char')
     else:
-        logfile = "FastTextWordChar.out"
+        logfile = "WordChar.out"
         logging.basicConfig(filename=logfile, filemode='a', level=logging.DEBUG)
-        logging.debug('imbd_wordchar')
 
     if len(sys.argv) == 5:
         batch_size = 5
@@ -90,14 +87,14 @@ if __name__ == "__main__":
             nb_class = 10
             acc = train_test(x_tr, x_val, x_ts, y_tr, y_val, y_ts, mode, batch_size, nb_class, nb_epoch,
                              seq_length_word, seq_length_char, lr)
-            print "accuracy:", acc
-            logging.debug(acc)
+            print "Test Accuracy:", acc
+            #logging.debug(acc)
         elif data_set == 'ccat50':
             nb_class = 50
             acc = train_test(x_tr, x_val, x_ts, y_tr, y_val, y_ts, mode, batch_size, nb_class, nb_epoch,
                              seq_length_word, seq_length_char, lr)
-            print "accuracy:", acc
-            logging.debug(acc)
+            print "Test Accuracy:", acc
+            #logging.debug(acc)
     elif len(sys.argv) == 4 and data_set == 'judgment':
         nb_class = 3
         batch_size = 5
@@ -121,8 +118,8 @@ if __name__ == "__main__":
             i += 1
             results.append(acc)
             logging.debug(acc)
-        print str(np.mean(results))
-        logging.debug(results)
+        print "Test Accuracy:", str(np.mean(results))
+        #logging.debug(results)
     elif len(sys.argv) == 4 and data_set == 'imdb':
         nb_class = 62
         batch_size = 32
@@ -145,6 +142,6 @@ if __name__ == "__main__":
             print "cv: " + str(i) + ", acc: " + str(acc)
             i += 1
             results.append(acc)
-            logging.debug(acc)
-        print str(np.mean(results))
-        logging.debug(results)
+            #logging.debug(acc)
+        print "Test Accuracy:", str(np.mean(results))
+        #logging.debug(results)
