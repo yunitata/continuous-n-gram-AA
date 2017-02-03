@@ -1,3 +1,8 @@
+'''
+Much of the code is modified from
+https://github.com/fchollet/keras/blob/master/examples/imdb_fasttext.py
+'''
+
 from __future__ import print_function
 import numpy as np
 from keras.models import Sequential
