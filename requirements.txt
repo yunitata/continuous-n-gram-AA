@@ -1,0 +1,4 @@
+scikit_learn==0.18
+keras==1.1.1
+pandas
+nltk==3.0.4

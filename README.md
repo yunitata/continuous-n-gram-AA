@@ -9,6 +9,10 @@ Dependencies
 4. Pandas
 5. NLTK 3.0.4
 
+You can install all of these by running:
+
+```pip install -r requirements.txt```
+
 Cloning the repository
 ----------------------
 ```git clone https://github.com/yunitata/continuous-n-gram-AA```
@@ -47,11 +51,11 @@ To run the experiment, simply run this following command:
 The codes are meant to be run in gpu machine. However, it can be run in cpu by changing the device=cpu, although the runtime will be significantly longer.<br />
 For example if you want to run the experiment for CCAT10 data with *char* model, then the command will be:
 
-```THEANO_FLAGS=device=gpu,floatX=float32 python training_testing.py "ccat10" "char" "/home/C10_train.csv" "/home/C10_test.csv"```
+```KERAS_BACKEND=theano THEANO_FLAGS=device=gpu,floatX=float32 python training_testing.py "ccat10" "char" "/home/C10_train.csv" "/home/C10_test.csv"```
 
 For IMDb62 and Judgment dataset, you just need to point to the .txt or .csv file as follows:
 
-```THEANO_FLAGS=device=gpu,floatX=float32 python training_testing.py "imdb" "char" "/home/imdb.csv"```
+```KERAS_BACKEND=theano THEANO_FLAGS=device=gpu,floatX=float32 python training_testing.py "imdb" "char" "/home/imdb.csv"```
 
 Please refer to the paper for the detail of the experiments.
 
